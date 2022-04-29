@@ -1,42 +1,38 @@
 # Intro to Django & Virtual Environments
 
 ![Django](https://juststickers.in/wp-content/uploads/2016/05/django-badge.png)
-## Python 3 Installation
 
-1. In your terminal, check the version of Python running on your machine:
+## Getting Started
 
-  ```
-  python -V
-  ```
+- Fork and Clone
 
-  If you are **_not_** on a version of Python that is 3 or greater, then you'd have to install Python3 on your machine. Run the following command from terminal:
-  ```
-  brew install python3
-  ```
+## Overview
+
+In this lesson, we'll be introduced to Django, virtual environments, and how to set up our models. We'll do this by building out an application together over the next several lessons.
 
 ## Setting Up a New Django Application - tunr_django
 
-We'll be using Django as our backend framework for the next few lectures of Unit 4. Let's set up our Django project in advance of our Django lectures. In this tutorial, we will create and install Django on a new project called `tunr_django`. Follow the steps below.
+We'll be using Django as our backend framework for the next few lectures of Unit 4. We will start by creating and installing Django on a new project called `tunr_django`. Follow the steps below.
 
 
-1. Navigate to your sandbox folder and make a `tunr_django` directory inside your sandbox folder. Navigate into your folder.
+1. Start by making a `tunr_django` directory inside this repo. Navigate into your folder.
 
-  ```
+  ```sh
   mkdir tunr_django
   cd tunr_django
   ```
 
 2. Next, we're going to build a virtual environment. Virtual environments allow us to have multiple versions of Python on the same system and manage project dependencies and to use a specific version of Python for different projects. To manage our dependencies and virtual environments, we're going to use a tool called [pipenv](https://pipenv.readthedocs.io/) so make sure you have it installed with `pipenv --version`.
 
-  If you don't have pipenv installed, easy! Homebrew to the rescue:
+If you don't have pipenv installed, easy! Homebrew to the rescue:
 
-  ```
-  brew install pipenv
+```sh
+brew install pipenv
 ```
 
 3. Let's "activate" our virtual environment to ensure every subsequent command will use the virtual environment we created. Run the following command from the project root:
 
-  ```
+  ```sh
   pipenv shell
   ```
 
@@ -64,7 +60,7 @@ We'll be using Django as our backend framework for the next few lectures of Unit
 
 5. Install django inside your `/tunr_django` folder:
 
-  ```
+  ```sh
   pipenv install django
   ```
 
@@ -72,13 +68,13 @@ We'll be using Django as our backend framework for the next few lectures of Unit
 
 6. Next, we're going to install the library for connecting Django to PostgreSQL:
 
-  ```
+  ```sh
   pipenv install psycopg2-binary
   ```
 
 7. All we've done so far is install our dependencies and create our virtual environment. Now, we want to start our Django project:
 
-  ```
+  ```sh
   pipenv run django-admin startproject tunr_django .
   ```
 
@@ -125,13 +121,13 @@ We'll be using Django as our backend framework for the next few lectures of Unit
 
 10. Next, we need to create our database. By default, Django uses sqlite for its database. We'll use postgres instead, because it's more robust and better for web applications. 
 
-- To ensure Postgres is running on your computer, **on macOS** type:
+- To ensure Postgres is running on your computer **on macOS** type:
 
-```bash
+```sh
 brew services list
 ```
 
-- To ensure Posgres is running on your computer, **on Linux** type:
+- To ensure Posgres is running on your computer **on Linux** type:
 
 ```bash
 service postgresql status
@@ -181,21 +177,17 @@ After running postgres, create a new file called `settings.sql` in the project r
 
 12. Now, in the terminal start the Django server by running
 
-  ```
+  ```sh
   python3 manage.py runserver
   ```
 
   `manage.py` contains a lot of management commands for Django. We'll see more later, but [here](https://docs.djangoproject.com/en/2.1/ref/django-admin/) is the full documentation if you are interested in what's going on behind the scenes. You can see a list of commands that `manage.py` offers by typing:
 
-  ```
+  ```sh
   python3 manage.py
   ```
 
-
-13. Finally, navigate to `localhost:8000`. You should see a page welcoming you to Django!
-
-
-## Next, lets make some models for our data  
+13. Finally, navigate to `localhost:8000`. You should see a page welcoming you to Django! 
 
 ## Models 
 
@@ -301,8 +293,6 @@ created automatically as soon as you insert data into them.
 A set of changes/modifications intended for a database. They can be anything that makes a permanent change - creating columns, creating tables, changing properties, etc.
 </details>
 
-
-
 ### Foreign Keys 
 
 Let's also start filling out the Song model. We will define the class and then
@@ -357,8 +347,6 @@ You can read more about migrations
 
 If you want to see which migrations have been run already, use the command
 `python3 manage.py showmigrations`.
-
-
 
 ### Admin Console 
 
@@ -450,3 +438,12 @@ python3 manage.py migrate
 ```
 
 </details>
+
+
+## Recap
+
+In this lesson, we set up a new Django project and virtual environment. Then we set up our application with postgres and even set up some models!
+
+## Resources
+
+- [Django Docs](https://docs.djangoproject.com/en/4.0/)
