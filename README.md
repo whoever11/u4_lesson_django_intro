@@ -15,11 +15,11 @@ In this lesson, we'll be introduced to Django, virtual environments, and how to 
 We'll be using Django as our backend framework for the next few lectures of Unit 4. We will start by creating and installing Django on a new project called `tunr_django`. Follow the steps below.
 
 
-1. Start by making a `tunr_django` directory inside this repo. Navigate into your folder.
+1. Start by making a `tunr_project` directory inside this repo. Navigate into your folder.
 
   ```sh
-  mkdir tunr_django
-  cd tunr_django
+  mkdir tunr_project
+  cd tunr_project
   ```
 
 2. Next, we're going to build a virtual environment. Virtual environments allow us to have multiple versions of Python on the same system and manage project dependencies and to use a specific version of Python for different projects. To manage our dependencies and virtual environments, we're going to use a tool called [pipenv](https://pipenv.readthedocs.io/) so make sure you have it installed with `pipenv --version`.
