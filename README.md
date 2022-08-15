@@ -58,7 +58,7 @@ brew install pipenv
   
   If it's set to an older version of Python (e.g., `2.7`), then you'd need to change it to the version of Python 3 that's available on your machine. You can check the version number by running `python3 -V` from your terminal. For example, if the version is `3.7.6`, then you'd have to update the `python_version` line in the `Pipfile` to `python_version="3.7.6"`.
 
-5. Install django inside your `/tunr_django` folder:
+5. Install django inside your `/tunr_project` folder  (the root directory), run:
 
   ```sh
   pipenv install django
