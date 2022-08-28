@@ -10,6 +10,12 @@
 
 In this lesson, we'll be introduced to Django, virtual environments, and how to set up our models. We'll do this by building out an application together over the next several lessons.
 
+Django is a *Conventional* database - if you follow the instructions and follow the steps, you will have full CRUD on all models, and Auth right out of the box
+
+This is constrasted to the *Configurative* database frameworks of Mongoose, Sequelize, and Express, where you as programmer had the ability to control what routes and controllers you wanted for each model.
+
+But as Ben Parker famously said to his nephew Peter, "With great power comes great responsbility". Because of the *conventional* nature of Django, the steps must be followed exactly, there is not a lot of wiggle room to play around in, the way we could with our previous back end set ups
+
 ## Setting Up a New Django Application - tunr_django
 
 We'll be using Django as our backend framework for the next few lectures of Unit 4. We will start by creating and installing Django on a new project called `tunr_django`. Follow the steps below.
