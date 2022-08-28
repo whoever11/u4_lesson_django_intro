@@ -374,18 +374,6 @@ class Song(models.Model):
 </details>
 
 <details>
-<summary>Solution: Modify admin.py</summary>
-
-```python
-from django.contrib import admin
-from .models import Artist, Song
-admin.site.register(Artist)
-admin.site.register(Song)
-```
-
-</details>
-
-<details>
 <summary>Solution: create migration</summary>
 
 ```bash
@@ -430,12 +418,14 @@ straight out of the box.
 
 Let's set it up! In `tunr/admin.py`, add the following code:
 
+
 ```python
 from django.contrib import admin
-from .models import Artist
-
+from .models import Artist, Song
 admin.site.register(Artist)
+admin.site.register(Song)
 ```
+
 
 **Now! Bear Witness To the Awesomeness of Django!!!**
 
