@@ -348,43 +348,7 @@ You can read more about migrations
 If you want to see which migrations have been run already, use the command
 `python3 manage.py showmigrations`.
 
-### Admin Console 
 
-Before we get too far, let's also create a superuser for our app. Django has
-authentication (and authorization) right out of the box, so you don't have to
-write it yourself or add a plugin.
-
-In the terminal, run:
-
-```bash
-$ python3 manage.py createsuperuser
-```
-
-Then fill in the information in the boxes that pop up!
-
-So far in this class, we have used seed files to add initial data to our
-databases. We can also do that in Django
-([see this article](https://docs.djangoproject.com/en/2.1/howto/initial-data/)),
-but let's try something a little bit different instead.
-
-Django has an admin dashboard built in, which gives us full CRUD functionality
-straight out of the box.
-
-Let's set it up! In `tunr/admin.py`, add the following code:
-
-```python
-from django.contrib import admin
-from .models import Artist
-
-admin.site.register(Artist)
-```
-
-**Now! Bear Witness To the Awesomeness of Django!!!**
-
-Run your server again, then navigate to `localhost:8000/admin`. You can login
-and get a full admin view where you have CRUD functionality for your model!
-
-Create two Artists here using the interface.
 
 ## Finish the Song model 
 
@@ -438,6 +402,47 @@ python3 manage.py migrate
 ```
 
 </details>
+
+### Admin Console 
+
+So far, we know at least 3 different ways to seed our DB's. We can use the Mongo/SQL shell, but that can get tedious quickly. We can use Seed files, but they have a good chance of running into errors. We can create a user friendly Front End server to connect to... but we first have to build a user friendly Front End server.
+
+Let's learn a new way of adding some content into our database - the Django Admin panel
+
+Django has authentication (and authorization) right out of the box, so you don't have to
+write it yourself or add a plugin.
+
+In the terminal, run:
+
+```bash
+$ python3 manage.py createsuperuser
+```
+
+Then fill in the information in the boxes that pop up!
+
+So far in this class, we have used seed files to add initial data to our
+databases. We can also do that in Django
+([see this article](https://docs.djangoproject.com/en/2.1/howto/initial-data/)),
+but let's try something a little bit different instead.
+
+Django has an admin dashboard built in, which gives us full CRUD functionality
+straight out of the box.
+
+Let's set it up! In `tunr/admin.py`, add the following code:
+
+```python
+from django.contrib import admin
+from .models import Artist
+
+admin.site.register(Artist)
+```
+
+**Now! Bear Witness To the Awesomeness of Django!!!**
+
+Run your server again, then navigate to `localhost:8000/admin`. You can login
+and get a full admin view where you have CRUD functionality for your model!
+
+Create two Artists here using the interface, then add some songs to them!
 
 
 ## Recap
