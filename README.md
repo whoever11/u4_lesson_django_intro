@@ -278,6 +278,18 @@ When you've made all the changes you think you need, go ahead and run:\
 $ python3 manage.py migrate
 ```
 
+If you are running into a Fatal Error, enter your tunr database with
+
+```
+psql tunr
+```
+
+and enter
+
+```
+GRANT postgres TO tunruser;
+```
+
 This will commit the migration to the database.
 
 If you open up `psql`:
