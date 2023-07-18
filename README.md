@@ -102,7 +102,7 @@ brew install pipenv
 8. Let's also create our app (make sure you're running the following command within the virtual environment you created in step 3):
 
   ```
-  $ django-admin startapp tunr
+   django-admin startapp tunr
   ```
 
   Note: if django-admin doesn't work, you can replace it with `python3 manage.py`, assuming `manage.py` is in your current directory. Again, make sure you're running the following command within the virtual environment you created in step 3.
@@ -162,7 +162,7 @@ After running postgres, create a new file called `settings.sql` in the project r
   Then run the following command from the root directory:
 
   ```
-  $ psql -U postgres -f settings.sql
+   psql -U postgres -f settings.sql
   ```
   
  If you are getting a fatal error, try removing the '-U postgres' from the command. If you have had to change up your Username when creating PSQL databases in Sequelize, add your username after the -U instead of 'postgres'
@@ -254,7 +254,7 @@ Windows users, you may need to add 'python -m' before some of your pipenv comman
 
 
 ```bash
-$ python3 manage.py makemigrations
+ python3 manage.py makemigrations
 ```
 
 This will generate a migration file that gets all of its data from the code in
@@ -275,7 +275,7 @@ When you've made all the changes you think you need, go ahead and run:\
 
 
 ```bash
-$ python3 manage.py migrate
+python3 manage.py migrate
 ```
 
 If you are running into a Fatal Error, enter your tunr database with
@@ -292,14 +292,15 @@ GRANT postgres TO tunruser;
 
 This will commit the migration to the database.
 
-If you open up `psql`:
+If you open up `psql`and connect to the `tunr` database:
 ```
-$ psql
+ psql tunr
 ```
 
-and connect to the `tunr` database:
+and run a 
+
 ```
-\c tunr
+\dt
 ```
 you'll see all the tables have now been created!
 
