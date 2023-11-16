@@ -312,6 +312,13 @@ created automatically as soon as you insert data into them.
 A set of changes/modifications intended for a database. They can be anything that makes a permanent change - creating columns, creating tables, changing properties, etc.
 </details>
 
+
+
+If you are recieving an error that says "Permisson denied on public schema", try running this command in PSQL
+```
+ALTER DATABASE tunr OWNER TO tunruser;
+```
+
 ### Foreign Keys 
 
 Let's also start filling out the Song model. We will define the class and then
